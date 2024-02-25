@@ -16,12 +16,13 @@ export default function App() {
   console.log(from);
 
   function convert() {
-    setConvertedAmount(dataFrom[to] * amount);
+    
     console.log(from);
     console.log(to);
   }
 
   function swap() {
+    setConvertedAmount(dataFrom[to] * amount)
     setTo(from);
     setFrom(to);
     
@@ -29,7 +30,7 @@ export default function App() {
 
   return (
     <div className="  main-container h-screen text-white text-4xl  text-center flex justify-center items-center">
-      <div className=" m-8 bg-[white]/40 backdrop-blur-[5px] border-[1px] p-2 px-4 py-5 pb-6 border-white w-[50rem] h-auto rounded-xl  flex-col justify-between items-center shadow-sm shadow-black">
+      <div className=" m-8 bg-[white]/40 backdrop-blur-[5px] border-[1px] p-2 px-4 py-5 pb-6 border-white sm:w-[50rem] w-[20rem] h-auto rounded-xl  flex-col justify-between items-center shadow-sm shadow-black">
         <div className="mt-2">
           <InputBox
             label="From"
@@ -37,12 +38,13 @@ export default function App() {
             onselectOption={(option) => setFrom(option)}
             options={currencyOptions}
             currencyOption={from}
+            
           />
         </div>
 
         <button
           onClick={swap}
-          className=" bottom-4 z-10 border-[1px] border-white m-1 relative  text-[2rem] w-[8rem] h-[3rem] bg-sky-600 text-white rounded-lg"
+          className=" bottom-4 z-10 border-[1px] border-white m-1 relative sm:text-[2rem] text-[1.2rem] sm:w-[8rem] w-[5rem] :sm:h-[3rem] h-2rem bg-sky-600 text-white rounded-lg"
         >
           Swap
         </button>
@@ -60,7 +62,7 @@ export default function App() {
         <div>
           <button
             onClick={convert}
-            className=" bg-sky-600  w-[40rem] h-[4rem] text-white rounded-2xl text-[2rem] border-[1px] border-white  shadow-black"
+            className=" bg-sky-600  sm:w-[40rem] h-[4rem] text-white rounded-2xl text-[20px] sm:text-[2rem] border-[1px] border-white  shadow-black px-4 "
           >
            Convert from {from} to {to}
           </button>
