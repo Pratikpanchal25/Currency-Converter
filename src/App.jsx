@@ -12,8 +12,12 @@ export default function App() {
   let dataFrom = useCurrencyInfo(from);
 
   const currencyOptions = Object.keys(dataFrom);
+  
 
-  console.log(from);
+  
+
+
+  console.log(currencyOptions);
 
   function convert() {
     setConvertedAmount(dataFrom[to] * amount)
@@ -64,7 +68,7 @@ export default function App() {
             onClick={convert}
             className=" bg-sky-600  sm:w-[40rem] h-[4rem] text-white rounded-2xl text-[20px] sm:text-[2rem] border-[1px] border-white  shadow-black px-4 "
           >
-           Convert from {from} to {to}
+           Convert from {from.toUpperCase()} to {to.toUpperCase()}
           </button>
         </div>
       </div>

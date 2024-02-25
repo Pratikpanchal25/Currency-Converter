@@ -14,13 +14,13 @@ export default function InputBox(
 
       <div className="flex justify-between items-center sm:w-[42rem] w-[10rem] mr-11 h-[5rem] mx-[2rem] text-black">
       <div >
-        <input  value={amount} onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))} className=" rounded-md outline-none w-[9rem] text-[15px] sm:text-[20px]  sm:border-none sm:w-[25rem]" type="number" />
+        <input  value={amount} onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))} className="pl-5 rounded-[20px] outline-none w-[9rem] text-[15px] sm:text-[20px] border-b-[2px] border-black sm:w-[25rem]" type="number" />
       </div>
       <div> 
         <select value={currencyOption} onChange={(e)=> onselectOption(e.target.value)} className="outline-none border-none" name="" id="">
 
       {
-        options.map((currency)=> (<option key={currency} value={currency}> {currency} </option>))
+        options.map((currency)=> (<option key={currency} value={currency}> {currency.toUpperCase()} </option>))
       }
       
         </select>
