@@ -7,7 +7,7 @@
 
 
 .main-container {
-  background: rgba( 0 ,0,0,0.5)url("https://images.pexels.com/photos/1064162/pexels-photo-1064162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background: rgba( 0 ,0,0,0.5) url("/background.jpeg");
   background-size: cover; 
   background-position: center center;
   background-repeat: no-repeat;

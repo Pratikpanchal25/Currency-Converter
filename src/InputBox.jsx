@@ -2,7 +2,7 @@ import React from "react";
 
 export default function InputBox(
   {
-    label , amount , onAmountChange , options=[] , currencyOption , onselectOption , mainFunction
+    label , amount , onAmountChange , options=[] , currencyOption , onselectOption 
   }
 ) {
   return (
@@ -13,10 +13,9 @@ export default function InputBox(
       </div>
 
       <div className="flex justify-between items-center sm:w-[42rem] w-[10rem] mr-11 h-[5rem] mx-[2rem] text-black">
-      <form onSubmit={(e)=>e.preventDefault()
-         }>
+      <div >
         <input  value={amount} onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))} className=" rounded-md outline-none w-[9rem] text-[15px] sm:text-[20px]  sm:border-none sm:w-[25rem]" type="number" />
-      </form>
+      </div>
       <div> 
         <select value={currencyOption} onChange={(e)=> onselectOption(e.target.value)} className="outline-none border-none" name="" id="">
 

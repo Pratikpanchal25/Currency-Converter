@@ -16,13 +16,13 @@ export default function App() {
   console.log(from);
 
   function convert() {
-    
+    setConvertedAmount(dataFrom[to] * amount)
     console.log(from);
     console.log(to);
   }
 
   function swap() {
-    setConvertedAmount(dataFrom[to] * amount)
+   
     setTo(from);
     setFrom(to);
     
