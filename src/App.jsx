@@ -19,13 +19,13 @@ export default function App() {
 
   console.log(currencyOptions);
 
-  function convert() {
+    function convert() {
     setConvertedAmount(dataFrom[to] * amount)
     console.log(from);
     console.log(to);
   }
 
-  function swap() {
+   function swap() {
    
     setTo(from);
     setFrom(to);
@@ -60,6 +60,7 @@ export default function App() {
             onselectOption={(option) => setTo(option)}
             options={currencyOptions}
             currencyOption={to}
+            isDisabled={true}
           />
         </div>
 
@@ -75,3 +76,5 @@ export default function App() {
     </div>
   );
 }
+
+
