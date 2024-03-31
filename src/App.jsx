@@ -7,29 +7,23 @@ export default function App() {
   const [to, setTo] = useState("inr");
   const [from, setFrom] = useState("usd");
   const [convertedAmount, setConvertedAmount] = useState();
- 
 
   let dataFrom = useCurrencyInfo(from);
+  console.log(dataFrom);
 
   const currencyOptions = Object.keys(dataFrom);
-  
-
-  
-
 
   console.log(currencyOptions);
 
-    function convert() {
-    setConvertedAmount(dataFrom[to] * amount)
+  function convert() {
+    setConvertedAmount(dataFrom[to] * amount);
     console.log(from);
     console.log(to);
   }
 
-   function swap() {
-   
+  function swap() {
     setTo(from);
     setFrom(to);
-    
   }
 
   return (
@@ -42,7 +36,6 @@ export default function App() {
             onselectOption={(option) => setFrom(option)}
             options={currencyOptions}
             currencyOption={from}
-            
           />
         </div>
 
@@ -69,12 +62,10 @@ export default function App() {
             onClick={convert}
             className=" bg-sky-600  sm:w-[40rem] h-[4rem] text-white rounded-2xl text-[20px] sm:text-[2rem] border-[1px] border-white  shadow-black px-4 "
           >
-           Convert from {from.toUpperCase()} to {to.toUpperCase()}
+            Convert from {from.toUpperCase()} to {to.toUpperCase()}
           </button>
         </div>
       </div>
     </div>
   );
 }
-
-
